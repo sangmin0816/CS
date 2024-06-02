@@ -99,4 +99,66 @@ public class App {
             data[n-1] = in.nextInt();
         }
     }
+
+    int search(int[] data, int n, int target){
+        for(int i=0; i<n; i++)
+            if(data[i]==target)
+                return i;
+        return -1;
+    }
+
+    int search(int[] data, int begin, int end, int target){
+        if(begin>end)
+            return -1;
+        if(target==data[begin])
+            return begin;
+        return search(data, begin+1, end, target);
+    }
+
+    int search2(int[] data, int begin, int end, int target){
+        if(begin>end)
+            return -1;
+        else {
+            int middle = (begin+end)/2;
+            if(data[middle]==target)
+                return middle;
+            int index = search2(data, begin, middle-1, target);
+            if (index!=-1)
+                return index;
+            return search2(data, middle+1, end, target);
+        }
+    }
+
+    int findMax(int[] data, int begin, int end)
+    {
+        if(begin==end)
+            return data[begin];
+        else
+            return Math.max(data[begin], findMax(data, begin+1, end));
+    }
+
+    int findMax2(int[] data, int begin, int end){
+        if(begin==end)
+            return data[begin];
+        else{
+            int middle = (begin+end)/2;
+            int max1 = findMax(data, begin,middle);
+            int max2 = findMax(data, middle+1, end);
+            return Math.max(max1, max2);
+        }
+    }
+
+    int binarySearch(String[] items, String target, int begin, int end){
+        if(begin>end)
+            return -1;
+        else {
+            int middle = (begin+end)/2;
+            int compResult = target.compareTo(items[middle]);
+            if(compResult==0)
+                return middle;
+            if(compResult<0)
+                return binarySearch(items, target, begin, middle+1);
+            return binarySearch(items, target, middle+1, end);
+        }
+    }
 }
