@@ -20,7 +20,7 @@ public class b11729 {
       cnt ++;
       int p1 = from;
       int p2 = mid;
-      int p3 = to;
+      int p3 = to;   
       Hanoi(N-1, p1, p3, p2);
       sb.append(from+" "+to+"\n");
       Hanoi(N-1, p2, p1, p3);

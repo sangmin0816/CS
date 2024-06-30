@@ -1,9 +1,9 @@
 public class App {
     public static void main(String[] args) throws Exception {
         
-        // Integer[] arrSS = {27, 10, 12, 20, 25, 13, 15, 22};
-        // Select<Integer> selectSort = new Select<>();
-        // selectSort.selectSort(arrSS);
+        Integer[] arrSS = {27, 10, 12, 20, 25, 13, 15, 22};
+        Select<Integer> selectSort = new Select<>();
+        selectSort.selectSort(arrSS);
 
         // System.out.println();
 
@@ -23,9 +23,9 @@ public class App {
         // Integer[] arrM = {27, 10, 12, 20, 25, 13, 22, 15};
         // mergeSort.mergeSort(arrM);
 
-        Quick<Integer> quickSort = new Quick<>();
-        Integer[] arrQ = {5, 1, 9, 4, 8, 3, 6, 2, 7};
-        quickSort.quickSort(arrQ);
+        // Quick<Integer> quickSort = new Quick<>();
+        // Integer[] arrQ = {5, 1, 9, 4, 8, 3, 6, 2, 7};
+        // quickSort.quickSort(arrQ);
 
         // Radix radixSort = new Radix<>();
         // Integer[] arrR = {10, 9, 88, 80, 777, 6666, 54321};
